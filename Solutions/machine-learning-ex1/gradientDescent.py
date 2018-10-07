@@ -13,9 +13,9 @@ def gradient_descent(X, y, theta, alpha, num_iters):
         #
         # Hint: X.shape = (97, 2), y.shape = (97, ), theta.shape = (2, )
 
-        error = np.dot(X, theta).flatten() - y
-        theta -= (alpha/m)*np.sum(X*error[:, np.newaxis], 0)
-
+        error = np.dot(X, theta).flatten() - y #flatten的作用是将多维数组降至一维
+        theta -= (alpha/m)*np.sum(X*error[:, np.newaxis], 0) #梯度下降公式theta=theta- alpha/m * sum((fx-y)*x),cost求导一次就变成这个
+                                                         #0时,是压缩行,即将每一列的元素相加,将矩阵压缩为一行
         J_history[i] = compute_cost(X, y, theta)
 
     return theta, J_history

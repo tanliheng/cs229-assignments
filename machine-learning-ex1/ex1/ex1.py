@@ -1,6 +1,6 @@
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt #绘图框架
 import numpy as np
-from matplotlib.colors import LogNorm
+from matplotlib.colors import LogNorm #将颜色规范化在log级别的0-1内
 from mpl_toolkits.mplot3d import axes3d, Axes3D
 from computeCost import *
 from gradientDescent import *
@@ -8,12 +8,12 @@ from plotData import *
 
 # ===================== Part 1: Plotting =====================
 print('Plotting Data...')
-data = np.loadtxt('ex1data1.txt', delimiter=',', usecols=(0, 1))
-X = data[:, 0]
-y = data[:, 1]
+data = np.loadtxt('ex1data1.txt', delimiter=',', usecols=(0, 1)) #读取文件，分隔值的字符，确定读取的列
+X = data[:, 0] #冒号左边是行范围，右边列范围。取二维数组中第一列的所有数据
+y = data[:, 1] #取二维数组中第二列的所有数据
 m = y.size
 
-plt.ion()
+plt.ion() #打开交互模式，plt.plot()直接出图像，不需要show()。没有ioff()关闭的话，图像一闪而过，不会常留
 plt.figure(0)
 plot_data(X, y)
 

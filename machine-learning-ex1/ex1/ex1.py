@@ -30,7 +30,7 @@ iterations = 1500
 alpha = 0.01
 
 # Compute and display initial cost
-print('Initial cost : ' + str(compute_cost(X, y, theta)) + ' (This value should be about 32.07)') #需要对computerCost.py补全，代价函数=1/2m * sum(f(x)-y)**2)，参考吴恩达机器学习课程
+print('Initial cost : ' + str(compute_cost(X, y, theta)) + ' (This value should be about 32.07)') #需要对computerCost.py补全，代价函数=1/2m * sum(f(x)-y)**2)，pdf第五页的公式
 
 theta, J_history = gradient_descent(X, y, theta, alpha, iterations) #在gradientDescent.py处对代码补全
 

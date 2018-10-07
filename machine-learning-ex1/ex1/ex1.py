@@ -30,9 +30,9 @@ iterations = 1500
 alpha = 0.01
 
 # Compute and display initial cost
-print('Initial cost : ' + str(compute_cost(X, y, theta)) + ' (This value should be about 32.07)') #需要对computer_cost.py补全，代价函数=1/2m * sum(f(x)-y)**2)，参考吴恩达机器学习课程
+print('Initial cost : ' + str(compute_cost(X, y, theta)) + ' (This value should be about 32.07)') #需要对computerCost.py补全，代价函数=1/2m * sum(f(x)-y)**2)，参考吴恩达机器学习课程
 
-theta, J_history = gradient_descent(X, y, theta, alpha, iterations)
+theta, J_history = gradient_descent(X, y, theta, alpha, iterations) #在gradientDescent.py处对代码补全
 
 print('Theta found by gradient descent: ' + str(theta.reshape(2)))
 
@@ -54,10 +54,10 @@ input('Program paused. Press ENTER to continue')
 # ===================== Part 3: Visualizing J(theta0, theta1) =====================
 print('Visualizing J(theta0, theta1) ...')
 
-theta0_vals = np.linspace(-10, 10, 100)
+theta0_vals = np.linspace(-10, 10, 100) #创建等差数列。起始，终止，样本数
 theta1_vals = np.linspace(-1, 4, 100)
 
-xs, ys = np.meshgrid(theta0_vals, theta1_vals)
+xs, ys = np.meshgrid(theta0_vals, theta1_vals) #生成一个坐标矩阵
 J_vals = np.zeros(xs.shape)
 
 # Fill out J_vals

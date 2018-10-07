@@ -3,7 +3,7 @@ import numpy as np
 
 def feature_normalize(X):
     # You need to set these values correctly
-    n = X.shape[1]  # the number of features
+    n = X.shape[1]  # the number of features。shape读取矩阵的长度，1表示第二维度
     X_norm = X
     mu = np.zeros(n)
     sigma = np.zeros(n)
@@ -25,7 +25,7 @@ def feature_normalize(X):
     #       To get the same result as Octave 'std', use np.std(X, 0, ddof=1)
     #
 
-    mu = np.mean(X, 0)
+    mu = np.mean(X, 0) #0：压缩行，对各列求均值，返回 1* n 矩阵
     sigma = np.std(X, 0, ddof=1)
     X_norm = (X - mu) / sigma
 

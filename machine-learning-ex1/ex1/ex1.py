@@ -4,7 +4,7 @@ from matplotlib.colors import LogNorm #将颜色规范化在log级别的0-1内
 from mpl_toolkits.mplot3d import axes3d, Axes3D
 from computeCost import *
 from gradientDescent import *
-from plotData import *
+from plotData import * #有一个plotData.py的文件需要把代码补齐
 
 # ===================== Part 1: Plotting =====================可视化为了理解数据
 print('Plotting Data...')
@@ -15,18 +15,18 @@ m = y.size
 
 plt.ion() #打开交互模式，plt.plot()直接出图像，不需要show()。没有ioff()关闭的话，图像一闪而过，不会常留
 plt.figure(0)
-plot_data(X, y)
+plot_data(X, y) #在plotdata.py中定义了一个plot_data的函数
 
 input('Program paused. Press ENTER to continue')
 
 # ===================== Part 2: Gradient descent =====================
 print('Running Gradient Descent...')
 
-X = np.c_[np.ones(m), X]  # Add a column of ones to X
-theta = np.zeros(2)  # initialize fitting parameters
+X = np.c_[np.ones(m), X]  # Add a column of ones to X。np_c按行连接两个矩阵（矩阵左右相加），行数相等
+theta = np.zeros(2)  # initialize fitting parameters。 theta = array([0, 0])
 
-# Some gradient descent settings
-iterations = 1500
+# Some gradient descent settings 迭代次数，学习速率（步长）
+iterations = 1500 
 alpha = 0.01
 
 # Compute and display initial cost

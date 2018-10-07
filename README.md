@@ -1,4 +1,4 @@
-# 课外算法python手工练习
+# 课外算法python手工练习（注释版）
 # CS229 Machine Learning Assignments in Python
 [![author](https://img.shields.io/badge/author-nsoojin-red.svg)](https://www.linkedin.com/in/soojinro) [![python](https://img.shields.io/badge/python-3.6-blue.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]() [![contribution](https://img.shields.io/badge/contribution-welcome-brightgreen.svg)]()
 

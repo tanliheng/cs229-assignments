@@ -38,7 +38,7 @@ So in Octave/Matlab,
 
 ## Contents
 #### [Exercise 1]
-* Linear Regression
+* Linear Regression 需要补齐plotData,computeCost,gradientDescent几个部分的代码，公式在pdf中有
 * Linear Regression with multiple variables
 #### [Exercise 2]
 * Logistic Regression

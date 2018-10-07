@@ -6,7 +6,7 @@ from computeCost import *
 from gradientDescent import *
 from plotData import *
 
-# ===================== Part 1: Plotting =====================
+# ===================== Part 1: Plotting =====================可视化为了理解数据
 print('Plotting Data...')
 data = np.loadtxt('ex1data1.txt', delimiter=',', usecols=(0, 1)) #读取文件，分隔值的字符，确定读取的列
 X = data[:, 0] #冒号左边是行范围，右边列范围。取二维数组中第一列的所有数据

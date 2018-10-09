@@ -10,7 +10,7 @@ def plot_data(X, y):
     #                examples and marker="o" for the negative examples
     #
 
-    pos = np.where(y == 1)[0]
+    pos = np.where(y == 1)[0] #输出满足条件的坐标
     neg = np.where(y == 0)[0]
 
     plt.scatter(X[pos, 0], X[pos, 1], marker="+", c='b')

@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import scipy.optimize as opt
+import scipy.optimize as opt #数值优化算法
 from plotData import *
 import costFunction as cf
 import plotDecisionBoundary as pdb
@@ -19,8 +19,8 @@ print('Plotting Data with + indicating (y = 1) examples and o indicating (y = 0)
 
 plot_data(X, y)
 
-plt.axis([30, 100, 30, 100])
-plt.legend(['Admitted', 'Not admitted'], loc=1)
+plt.axis([30, 100, 30, 100]) #确定坐标轴范围，([xmin, xmax, ymin, ymax])
+plt.legend(['Admitted', 'Not admitted'], loc=1) #loc是位置
 plt.xlabel('Exam 1 score')
 plt.ylabel('Exam 2 score')
 
@@ -43,7 +43,7 @@ initial_theta = np.zeros(n + 1)
 # Compute and display initial cost and gradient
 cost, grad = cf.cost_function(initial_theta, X, y)
 
-np.set_printoptions(formatter={'float': '{: 0.4f}\n'.format})
+np.set_printoptions(formatter={'float': '{: 0.4f}\n'.format}) #确定浮点数精度
 
 print('Cost at initial theta (zeros): {:0.3f}'.format(cost))
 print('Expected cost (approx): 0.693')

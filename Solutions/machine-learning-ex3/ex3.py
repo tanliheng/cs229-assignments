@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import scipy.io as scio
+import scipy.io as scio #读取mat格式数据
 
 import displayData as dd
 import lrCostFunction as lCF
@@ -9,7 +9,7 @@ import predictOneVsAll as pova
 
 plt.ion()
 
-# Setup the parameters you will use for this part of the exercise
+# Setup the parameters you will use for this part of the exercise设置参数
 input_layer_size = 400  # 20x20 input images of Digits
 num_labels = 10         # 10 labels, from 0 to 9
                         # Note that we have mapped "0" to label 10
